@@ -19,7 +19,7 @@ def main():
 
     visited[guard_pos[0]][guard_pos[1]] = 1
 
-    # Get direction of straight movement or turning from facing direction of the guard
+    # Get direction of straight movement or turning from the facing direction of the guard
     def get_dir(facing):
         match facing:
             case '^':
@@ -68,7 +68,7 @@ def main():
 
     data[guard_pos[0]][guard_pos[1]] = '.'
 
-    # Got through visited positions and put obstacle in them
+    # Go through visited positions and put obstacle in them
     # Move guard through the space and check if there is loop
     for i in range(len(data)):
         for j in range(len(data[0])):
