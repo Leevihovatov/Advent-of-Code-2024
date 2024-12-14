@@ -1,5 +1,5 @@
 def main():
-    with open("test.txt", "r") as f:
+    with open("input11.txt", "r") as f:
         data = f.read().split()
 
     stones = [int(x) for x in data]
@@ -7,7 +7,7 @@ def main():
     silver = 0
     gold = 0
 
-    for i in range(8):
+    for i in range(25):
         new_stones = []
         for s in stones:
             if s == 0:
@@ -19,8 +19,9 @@ def main():
                 new_stones.append(s*2024)
 
         stones = new_stones
-        print(f'{i} {len(stones)} {stones}')
+        #print(f'{i} {len(stones)} {stones}')
 
+    silver = len(stones)
     print(f'Silver: {silver}')
     print(f'Gold: {gold}')
 
